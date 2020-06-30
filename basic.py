@@ -27,8 +27,7 @@ print( np.empty_like (  b ))
 print( np.arange(10000))
 import sys
 np.set_printoptions(threshold=sys.maxsize)
-print( np.arange(10000))
-
+#print( np.arange(10000))
 # A*B , A@B A.dot(B)
 
 A = np.arange(4).reshape(2,2)
@@ -39,4 +38,63 @@ print(B)
 print( A*B) # elementwise product
 print( A@B) # matrix product
 print( A.dot(B)) #matrix product
+
+# random...
+
+np.random.seed(42); F = np.random.random(3); print(F)
+np.random.seed(42); F = np.random.random_sample(3); print(F)
+np.random.seed(42); F = np.random.bytes(3); print(F)
+
+np.random.seed(42);
+F = np.random.random_integers(0,3); print(F)
+F = np.random.random_integers(0,3); print(F)
+F = np.random.random_integers(0,3); print(F)
+F = np.random.random_integers(0,3); print(F)
+F = np.random.permutation([1,3,5]); print(F)
+F = np.random.permutation([1,3,5]); print(F)
+F = np.random.permutation([1,3,5]); print(F)
+F = np.random.permutation([1,3,5]); print(F)
+print('------------------------')
+X=np.arange(3)
+F = np.random.shuffle(X); print(X)
+F = np.random.shuffle(X); print(X)
+F = np.random.shuffle(X); print(X)
+F = np.random.shuffle(X); print(X)
+
+
+X=np.arange( 0,10,3 )
+
+N = np.random.choice(X); print(N)
+
+
+#ndarray method elements
+#sum, min, max ,cumsum
+
+print( '------------- some method.. ----------------')
+
+a=np.arange(1,11)
+print('sum is:', a.sum() )
+print('min is :', a.min() )
+print('max is :', a.max() )
+
+a=np.arange(1,11).reshape(2,5)
+print(a)
+
+print('for axis 0 sum is:', a.sum(axis=0) )
+print('for axis 0 sum is:', a.sum(axis=1) )
+
+print('-----------------------------------------------')
+a=np.arange(1,31).reshape(2,5,3)
+print(a)
+
+print('for axis 0 sum is:', a.sum(axis=0) )
+print('for axis 1 sum is:', a.sum(axis=1) )
+print('for axis 2 sum is:', a.sum(axis=2) )
+
+print('for axis 0 cumsum is:\n', a.cumsum(axis=0) )
+print('for axis 1 cumsum is:\n', a.cumsum(axis=1) )
+print('for axis 2 cumsum is:\n', a.cumsum(axis=2) )
+
+
+
 
