@@ -97,4 +97,37 @@ print('for axis 2 cumsum is:\n', a.cumsum(axis=2) )
 
 
 
+print ( '------------- indexing slicing iterating-----------')
 
+a = np.arange(10)**3
+print( a )
+
+print( a[0:6:2 ])
+print( a[:6:2 ])
+
+print( a[::-1])
+
+
+def f(x,y):
+    return  10*x + y
+
+print ( f(1,1 ) )
+
+b=np.fromfunction(f,(2,3),dtype=np.int32)
+print(b)
+print( b[1,1])
+print( b[0:2,1] )
+print( b[:,1] )
+print( b[1,:] )
+
+print( b[0:2,1:3] )
+print( b[-1] )
+print( b[-1,:] )
+
+
+for i_row in b:
+    print(i_row)
+
+
+for i_elem in b.flat:
+    print(i_elem)
